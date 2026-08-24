@@ -54,3 +54,23 @@ Task_Management_System/
 ├── .gitignore
 ├── requirements.txt          # Backend Python dependencies
 └── main.py                   # FastAPI server entry point
+
+🚀 Getting Started
+1. PrerequisitesPython 3.10+Node.js 18+ and npmMySQL Server
+2. Backend SetupClone the repository:Bashgit
+clone [https://github.com/DharunRS/Task_Management_System.git](https://github.com/DharunRS/Task_Management_System.git)
+cd Task_Management_System
+Create and activate a virtual environment:Windows (PowerShell):PowerShellpython -m venv venv
+.\venv\Scripts\Activate.ps1
+Linux/macOS:Bashpython3 -m venv venv
+source venv/bin/activate
+Install dependencies:Bashpip install -r requirements.txt
+Configure Environment Variables:Create a .env file in the root directory:Code snippetDATABASE_URL=mysql+pymysql://<DB_USER>:<DB_PASSWORD>@localhost:3306/<DB_NAME>
+JWT_SECRET=supersecretkey
+JWT_ALGORITHM=HS256
+Run the FastAPI server:Bashuvicorn main:app --reload
+API root: http://127.0.0.1:8000Swagger UI Documentation: http://127.0.0.1:8000/docs3. Frontend SetupNavigate to the frontend directory:Bashcd task-frontend
+Install dependencies:Bashnpm install
+Start the Vite development server:Bashnpm run dev
+Frontend Application: http://localhost:5173🔌 API Endpoints SummaryMethodEndpointDescriptionAuth RequiredPOST/auth/registerRegister a new user accountNoPOST/auth/loginAuthenticate user & return JWT access tokenNoGET/tasks/Retrieve user tasks (supports priority & search)YesPOST/tasks/Create a new scheduled taskYesGET/tasks/{id}Fetch specific task by IDYesPUT/tasks/{id}Update existing taskYesDELETE/tasks/{id}Remove a taskYes
+📄 LicenseThis project is open-source and available under the MIT License.
